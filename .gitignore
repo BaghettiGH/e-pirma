@@ -1,0 +1,33 @@
+# dependencies
+node_modules/
+**/node_modules/
+
+# env
+.env
+.env.local
+**/.env
+**/.env.local
+
+# build output
+dist/
+**/dist/
+.vercel/
+
+# uploads (local dev file storage)
+backend/uploads/
+
+# drizzle
+backend/drizzle/
+
+# logs
+*.log
+npm-debug.log*
+bun-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# editor
+.vscode/
+.idea/
