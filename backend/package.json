@@ -19,7 +19,8 @@
     "jsonwebtoken": "^9.0.3",
     "jwt": "^0.2.0",
     "nanoid": "^5.1.16",
-    "pg": "^8.22.0"
+    "pg": "^8.22.0",
+    "resend": "^6.17.1"
   },
   "devDependencies": {
     "@types/jsonwebtoken": "^9.0.10",
