@@ -115,7 +115,10 @@ export default function PlaceBoxes() {
 
       navigate(`/documents/${id}`);
     } catch (err: any) {
-      setError(err.response?.data?.error || "Failed to save/send");
+      console.log("Save/send error:", err);
+  console.log("Response data:", err.response?.data);
+  console.log("Status:", err.response?.status);
+  setError(err.response?.data?.error || "Failed to save/send");
     } finally {
       setSaving(false);
     }

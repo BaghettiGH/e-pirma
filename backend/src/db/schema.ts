@@ -8,6 +8,7 @@ import {
   integer,
   jsonb,
   pgEnum,
+  doublePrecision,
 } from "drizzle-orm/pg-core";
 
 // ---------- ENUMS ----------
@@ -84,10 +85,10 @@ export const signatureBoxes = pgTable("signature_boxes", {
     .notNull()
     .references(() => signers.id, { onDelete: "cascade" }),
   page: integer("page").notNull(),          // 1-indexed page number
-  x: integer("x").notNull(),                // position as % or px (we'll define in Phase 3)
-  y: integer("y").notNull(),
-  width: integer("width").notNull(),
-  height: integer("height").notNull(),
+  x: doublePrecision("x").notNull(),                // position as % or px (we'll define in Phase 3)
+  y: doublePrecision("y").notNull(),
+  width: doublePrecision("width").notNull(),
+  height: doublePrecision("height").notNull(),
   signedImageKey: text("signed_image_key"), // stored signature image once signed
   signatureMethod: signatureMethodEnum("signature_method"),
   signedAt: timestamp("signed_at"),
